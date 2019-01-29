@@ -1,0 +1,29 @@
+
+/* .left {
+    border: solid blue 2px;
+    background: black;
+} */
+.left {
+    /* border: solid grey 2px; */
+    height: 100vh;
+    text-align: center;
+}
+
+.right {
+    border: solid grey 2px;
+    background: yellow;
+    height: 100vh;
+
+}
+
+h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 70px;
+    font-weight: bold;
+    /* text-align: center; */
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
