@@ -1,35 +1,128 @@
-<header>
-        <h6><a href="#">WordFlow</a></h6>
-    <ul>
-        <li><a href="#">Info</a></li>
-        <li><a href="#">Notes</a></li>
-        <li><a href="#">Forum</a></li>
-        <li><a href="#">Meetups</a></li>
-        <li><a href="#">Challenge</a></li>
-    </ul>
-</header>
-<section class="main-content">
-    <p>Save to Notes</p>
-    <p class="prompt"></p>
-    {{#each notes}}
-            <div>
-                <p> {{ createdAt }} </p>
-            </div>
+ <header class="site-header">
+      <nav>
+        <div class="nav-wrapper">
+          <a href="/" class="brand-logo left">WordFlow</a>
+          <ul class="right">
+          {{#if currentUser}}
+            <li><a href="/tweet/new">+tweet</a></li>
+            <li><a href="/user/{{currentUser.id}}">Profile</a></li>
+            <li><a href="/user/logout">Log Out</a></li>
+          {{else}}
+            <li><a href="/user/sign-up">prompts</a></li>
+            <li><a href="/notes/new">new note</a></li>
+          {{/if}}
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+{{#each notes}}
             <div>
                 <p> {{ prompt }} </p>
             </div>
             <div>
-                <p> {{ content }} </p>
+                <p>  {{ content }} </p>
             </div>
+            <div>
+                <p> {{ createdAt }} </p>
+            </div>
+{{/each }}
+
+  
+{{!-- {{#if notes}}
+  <ul class="notes">
+    {{#each tweets}}
+      <div class="card">
+        <div class="card-content">
+          <a class="card-title" href="/tweet/{{id}}">
+            prompt: {{ prompt }}
+            notes: {{ content }}
+          </a>
+        </div>
+        <div class="card-action"> --}}
+          {{!-- <a href="/user/{{ author.id }}" class="">{{ author.local.email }}</a> --}}
+          {{!-- <span class="tweet__date">{{ createdAt }}</span>
+          {{!-- <span class="tweet_comments">{{ comments.length }} Comments</span> --}}
+        {{!-- </div>
+      </div>
     {{/each}}
-    </p>
+  </ul>
+{{/if}} 
+
+{{#if notes}}
+<ul class="notes">
+  {{#each notes}}
+  <div class="card">
+    <div class="card-content">
+      <p class="card-title"> {{ createdAt }} </p>
+    </div>
+    <div class="card-content">
+      <p class="card-title"> {{ prompt }} </p>
+    </div>
+    <div class="card-content">
+      <p class="card-title"> {{ content }} </p>
+    </div>
+{{/each}}
+</ul>
+{{/if}} 
+
+  {{!-- {{/each}} --}}
+{{!-- {{/if}} --}}
+{{!-- <section class="main-content">
+    <p>Save to Notes</p>
+    <p class="prompt"></p> --}} 
+{{!-- {{#if note}}
+<div class="card">
+    <div class="date-user">
+        {{ note.createdAt }}
+    </div>
+    <div class="title">
+        {{ note.title }}
+    </div>
+    <div class="description">
+        {{ recipe.description }}
+    </div>
+    <div class="ingredients-list">
+        <h4>Ingredients:</h4>
+        {{#if recipe.ingredients}}
+        <ul class="ingredients">
+            {{#each recipe.ingredients}}
+            <li>{{ this }}</li>
+            {{/each}}
+        </ul>
+        {{/if}}
+    </div>
+    <div class="instructions-list">
+        {{#if recipe.instructions}}
+        <ol class="instructions">
+            {{#each recipe.instructions}}
+            <li>{{ this }}</li>
+            {{/each}}
+        </ol>
+        {{/if}}
+    </div>
+</div>
+{{/if}} --}}
+  
+
+    {{!-- <div class="card-action">
+      <a href="/user/{{ author.id }}" class="">{{ author.local.email }}</a>
+      <span class="tweet__date">{{ createdAt }}</span>
+      <span class="tweet_comments">{{ comments.length }} Comments</span>
+    </div>
+  </div> --}}
+  {{!-- {{/each}}
+</ul>
+{{/if}} --}}
+{{!-- </p>
     <p>Tap the element for a new prompt</p>
-</section>
-<footer>
+</section> --}}
+{{!-- <footer>
     <span>PROMPTS</span>
     <ul>
         <button type="button" id="narrative">narrative</button>
         <button type="button" id="persuasive">persuasive</button>
         <button type="button" id="news">news</button>
     </ul>
-</footer>
+</footer>  --}}
+

@@ -7,7 +7,18 @@ module.exports = {
         .then( notes => {
             res.render("note/index", { notes })
         })
-       }  
+       },
+    new: (req, res) => {
+        res.render("note/new")
+    }
+    //    create: (req, res) => {   
+    //     Note.create(req.body)
+    //     // .sort({ createdAt: -1 })
+    //     .then( notes => {
+    //         res.render("note/index", { notes })
+    //     })
+    //    },
+
     }
       
 // module.exports = {

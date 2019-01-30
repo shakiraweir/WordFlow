@@ -1,0 +1,35 @@
+ <header class="site-header">
+      <nav>
+        <div class="nav-wrapper">
+          <a href="/" class="brand-logo left">WordFlow</a>
+          <ul class="right">
+          {{#if currentUser}}
+            <li><a href="/tweet/new">+tweet</a></li>
+            <li><a href="/user/{{currentUser.id}}">Profile</a></li>
+            <li><a href="/user/logout">Log Out</a></li>
+          {{else}}
+            <li><a href="/user/sign-up">prompts</a></li>
+            <li><a href="/notes/new">new note</a></li>
+          {{/if}}
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+
+    
+<section class="form-container">
+  <h4>New Note</h4>
+  <form action="/notes" method="post" class="tweet-form">
+    {{!-- <p class="input-field">
+      <textarea name="tweet[content]" cols="30" rows="10" placeholder="Message"></textarea>
+    </p> --}}
+    <p class="input-field">
+      <textarea name="tweet[content]" cols="30" rows="10" placeholder="Prompt"></textarea>
+       <textarea name="tweet[content]" cols="30" rows="10" placeholder="Message"></textarea>
+    </p>
+    <p class="input-field">
+      <input type="submit" value="Submit" class="btn waves-effect waves-light">
+    </p>
+  </form>
+</section>
