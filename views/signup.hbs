@@ -1,5 +1,4 @@
-
-  <!-- Page Layout here -->
+<!-- Page Layout here -->
     <div class="row">
         <div class="col l6 teal lighten-1 white-text">
             <!-- black page content -->
@@ -19,7 +18,21 @@
         <div class="col l6 white lighten-5 white-text">
             <!-- white page content  -->
             <div class="right">
-                <a href="/signin" onclick="on()" class="waves-effect waves-light btn center-align">Sign In</a>
             </div>
         </div>  
     </div>
+
+<section class="row" id="overlay">
+    <p>Ready to let the words flow? Create an account<p>
+  <form action="/" method="POST" class="auth-form">
+    <p class="input-field">
+      <input type="email" name="email" placeholder="Email">
+    </p>
+    <p class="input-field">
+      <input type="password" name="password" placeholder="Password">
+    </p>
+    <p class="input-field">
+      <input type="submit" value="Sign In" class="btn">
+    </p>
+  </form>
+</section>

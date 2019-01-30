@@ -2,7 +2,9 @@ const express = require('express')
 const router = express.Router()
 
 router.use('/', require('./application.js'));
-router.use('/user', require('./user.js'));
+router.use('/signin', require('./signin.js'));
+router.use('/signup', require('./signup.js'));
+// router.use('/signup', require('./user.js'));
 // router.use('/question', require('./question.js'));
 
 

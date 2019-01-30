@@ -10,9 +10,10 @@
 }
 
 .right {
-    border: solid grey 2px;
-    background: yellow;
+    /* border: solid grey 2px; */
+    /* background: yellow; */
     height: 100vh;
+    text-align: center;
 
 }
 
@@ -25,5 +26,29 @@ h1 {
 
 a {
     text-decoration: none;
-    color: white;
+    color: black;
 }
+
+.btn {
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    color: black;
+}
+
+#overlay {
+    position: fixed;
+    display: block;
+    width: 70%; /* cover 70% of the full width of the page */
+    height: 80%; /* cover 80% of the full height of the page */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* background: rgba(0,0,0,0.5); Black background with opacity */
+    z-index: 2; /* Specify stack order of elements */
+    background: white;
+    border-radius: 5px;
+    cursor: pointer; /* add a pointer on hover */
+} 
