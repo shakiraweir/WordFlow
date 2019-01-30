@@ -1,4 +1,6 @@
-
+body {
+    color: black;
+}
 /* .left {
     border: solid blue 2px;
     background: black;
@@ -52,3 +54,26 @@ p {
     border-radius: 5px;
     cursor: pointer; /* add a pointer on hover */
 } 
+
+li {
+    display: inline;
+    border: solid black 4px;
+}
+
+header, footer {    
+    display: flex;
+    justify-content: center;
+    border: solid blue 2px;
+}
+
+.main-content {
+    height: 83vh;
+}
+
+.main-content p {
+    text-align: center;
+}
+
+.prompt {
+    height: 72vh;
+}

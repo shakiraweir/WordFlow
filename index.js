@@ -7,14 +7,14 @@ const mongoose = require('mongoose')
 const applicationController = require("./controllers/application")
 mongoose.Promise = Promise
 
-
-
 app.set("view engine", "hbs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.json())
 
 // app.use('/', applicationController);
 app.use(require('./routes/index.js'))
+
 
 
 app.listen(3000, () => {

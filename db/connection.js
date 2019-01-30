@@ -1,4 +1,4 @@
 const mongoose = require('mongoose')
-mongoose.connect('mongodb://localhost/user_db') //need to create Database name
+mongoose.connect('mongodb://localhost/wordflow')
 mongoose.Promise = Promise;
 module.exports = mongoose;

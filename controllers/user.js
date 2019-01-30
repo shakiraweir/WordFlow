@@ -26,14 +26,14 @@ module.exports = {
     signup: (req, res) => {
         res.render("signup");
       }
-    create: (req, res) => {
-        User.create({
-          username: req.body.username,
-          email: req.body.email,
-          password: req.body.password
-        }).then(user => {
-          res.redirect(`/user/${user._id}`);
-        });
+    // create: (req, res) => {
+    //     User.create({
+    //       username: req.body.username,
+    //       email: req.body.email,
+    //       password: req.body.password
+    //     }).then(user => {
+    //       res.redirect(`/user/${user._id}`);
+    //     });
     // login: (req, res) => {
     //   res.render("user/login");
     // }
